@@ -2,7 +2,6 @@
 
 Library create in order to have useful procedures in Métodos Discretos (Discrete Methods) course of [Universidade Federal de Juiz de Fora](http://www.ufjf.br/ufjf/)
 
----
 
 ## Dependencies
 
@@ -10,7 +9,6 @@ Library create in order to have useful procedures in Métodos Discretos (Discret
 pip3 install numpy
 ```
 
----
 ## Methods
 
 - Norm
