@@ -1,24 +1,5 @@
 import numpy as np
 
-def D3(f,x,h):
-  """
-  D3(f,x,h) -> float
-
-  Determines the first derivate of order 3 of the function
-  f at point x with step h  
-  
-  Params
-  ----------
-      f   -> (function) to be derivate
-      x   -> (float) derivate point of interest
-      h   -> (float) step size
-  
-  Return
-  -------
-      res -> (float) value of the derivate of f at point x
-  """
-  return 1/6/h*(2*f(x+h) + 3*f(x) - 6*f(x-h) + f(x-2*h))
-
 def norm_n(vec,n):
   """
   norm_n(vec,n) -> float
@@ -50,7 +31,7 @@ def norm_inf(vet):
   """
   norm_inf(vet) -> float
   
-  Determines the inifite norm of the vector.
+  Determines the inifity norm of the vector.
   Vector must have one or two dimensions.
   
   Params
@@ -59,13 +40,34 @@ def norm_inf(vet):
   
   Return
   -------
-      res   -> (float) volue of the infinite norm
+      res   -> (float) volue of the infinity norm
   """
   
   if np.size(np.shape(vet)) == 1:
     return max(abs(vet))
   else:
     return max(max(abs(vet)))
+
+def D3(f,x,h):
+  """
+  D3(f,x,h) -> float
+
+  Central finite difference method
+  Determines the first derivate of order 3 of the function
+  f at point x with step h  
+  
+  Params
+  ----------
+      f   -> (function) to be derivate
+      x   -> (float) derivate point of interest
+      h   -> (float) step size
+  
+  Return
+  -------
+      res -> (float) value of the derivate of f at point x
+  """
+  return 1/6/h*(2*f(x+h) + 3*f(x) - 6*f(x-h) + f(x-2*h))
+
 
 def secant(f,x0,x1,n,tol):
   """
