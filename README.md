@@ -3,13 +3,13 @@
 Library create in order to have useful procedures in Métodos Discretos (Discrete Methods) course of [Universidade Federal de Juiz de Fora](http://www.ufjf.br/ufjf/)
 
 
-## Dependencies
+## :pencil: Dependencies
 
 ```sh
 pip3 install numpy
 ```
 
-## Methods
+## :mag: Methods
 
 - Norm
 - Inifinity norm
